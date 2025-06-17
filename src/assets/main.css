@@ -1,0 +1,16 @@
+/* En tu main.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Añade esto si persisten problemas */
+.pi {
+  font-family: primeicons !important;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  display: inline-flex;
+}
