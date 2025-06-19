@@ -8,7 +8,13 @@ module.exports = {
     extend: {
       fontFamily: {
         'pi': ['primeicons'] // Asegura que los iconos se muestren
-      }
+      },
+ colors: {     
+        background: '#f1e6ca',
+        text: '#232757',
+        backgroundButton:'#c83726',
+        textButton:'#f7d622'
+      },
     }
   }
 }

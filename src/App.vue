@@ -1,12 +1,7 @@
 <script setup>
-import TailwindTest from './components/TailwindTest.vue'
-
+import Landing from './layouts/Landing.vue';
 </script>
 
 <template>
-    <TailwindTest />
+  <Landing/>
 </template>
-
-<style scoped>
-
-</style>
