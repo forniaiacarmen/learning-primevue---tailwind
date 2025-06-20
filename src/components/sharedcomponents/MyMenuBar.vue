@@ -1,24 +1,22 @@
 <template>
-  <nav class="px-4 py-3 flex items-center justify-between bg-background relative">
-    <!-- Logo como router-link -->
-    <router-link to="/" class="text-xl font-bold text-backgroundButton [text-shadow:1px_1px_1px_#000]">
-      MiApp
-    </router-link>
+  <nav class="px-4 py-3 flex items-center justify-end bg-background relative">
+   
+
 
     <!-- Menú hamburguesa -->
-    <button @click="toggleMenu" class="md:hidden">
-      <i class="pi pi-bars text-2xl text-primary"></i>
+    <button @click="toggleMenu" class="md:hidden bg-background">
+      <i class="pi pi-bars text-2xl text-text"></i>
     </button>
 
     <!-- Menú horizontal -->
-    <ul class="hidden md:flex space-x-6 text-gray-700 font-medium">
+    <ul class="hidden md:flex space-x-6 text-text font-medium">
       <li>
-        <router-link to="/" class="hover:text-primary" active-class="text-primary">
+        <router-link to="/" class="hover:text-backgroundButton" active-class="text-primary">
           Inicio
         </router-link>
       </li>
       <li>
-        <a href="#" class="hover:text-primary" @click.prevent="downloadPDF">
+        <a href="#" class="hover:text-backgroundButton" @click.prevent="downloadPDF">
           Carta
         </a>
       </li>

@@ -2,10 +2,10 @@
   <!-- Contenedor principal con fondo degradado -->
   <div class="w-full  py-12 px-4 sm:px-6 lg:px-8 bg-background">
     <!-- Contenedor de la tarjeta con efecto hover y transición -->
-    <div class="mx-auto max-w-3xl bg-white rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl">
+    <div class="mx-auto max-w-3xl bg-background rounded-xl shadow-2xl overflow-hidden transition-all duration-300 hover:shadow-3xl">
       <!-- Cabecera con gradiente -->
-      <div class="bg-gradient-to-r from-blue-600 to-indigo-700 p-6 text-center">
-        <h3 class="text-2xl font-bold text-white">Contáctanos</h3>
+      <div class=" p-6 text-center">
+        <h3 class="text-2xl font-bold text-text">Contáctanos</h3>
       </div>
       
       <!-- Contenido con grid responsive -->
@@ -17,15 +17,15 @@
             :key="index"
             class="flex items-start group transition-all duration-200 hover:bg-blue-50 p-3 rounded-lg"
           >
-            <div class="flex-shrink-0 bg-blue-100 p-3 rounded-full text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors duration-200">
+            <div class="flex-shrink-0  p-3 rounded-full">
               <i :class="`pi ${item.icon} text-xl`"></i>
             </div>
             <div class="ml-4">
-              <h4 class="text-lg font-semibold text-gray-800 group-hover:text-blue-700 transition-colors duration-200">
+              <h4 class="text-lg font-semibold ">
                 {{ item.title }}
               </h4>
-              <p class="text-gray-600 mt-1">{{ item.content }}</p>
-              <p v-if="item.additional" class="text-gray-500 text-sm mt-1">{{ item.additional }}</p>
+              <p class="mt-1">{{ item.content }}</p>
+              <p v-if="item.additional" class="text-sm mt-1">{{ item.additional }}</p>
             </div>
           </div>
         </div>
