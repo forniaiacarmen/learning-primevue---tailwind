@@ -1,20 +1,19 @@
 <template>
   <div class="min-h-screen bg-gray-900 text-white flex p-1">
     <!-- Columna izquierda (Visible solo en desktop) -->
-    <div class="hidden lg:block w-48 bg-gray-800 p-4 sticky top-0 h-screen overflow-y-auto">
+ <div class="hidden lg:flex flex-col w-48 bg-gray-800 p-4 sticky top-0 h-screen">
       <h3 class="text-amber-500 font-bold mb-4">Publicidad</h3>
-      <div class="flex-1"> <!-- Este div ocupará todo el espacio disponible -->
-        <div class="bg-gray-700 p-2 rounded-lg h-full flex items-center justify-center">
+      <div class="flex-1 overflow-y-auto"> <!-- Flex-1 + overflow para contenido largo -->
+        <div class="bg-gray-700 p-2 rounded-lg h-full flex items-center justify-center"> <!-- h-full aquí -->
           <p>Anuncio 1</p>
-        </div>    
+        </div>
       </div>
     </div>
-
-    <!-- Columna central (Contenido principal) -->
-    <main class="flex-1 w-full p-0.4">
-      <div class="bg-[#f1e6ca] text-gray-900">
-        <div class="container mx-auto px-4 py-8">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- Columna central (CORREGIDO) -->
+    <main class="flex-1 min-w-0 flex flex-col"> <!-- Añadido flex-col -->
+      <div class="bg-[#f1e6ca] text-gray-900 flex-1"> <!-- flex-1 para que ocupe el espacio restante -->
+        <div class="container mx-auto px-4 py-8 h-full"> <!-- h-full para heredar altura -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 h-full"> <!-- h-full opcional si necesitas que el grid ocupe toda la altura -->
             <div 
               v-for="(col, index) in 4" 
               :key="index"
@@ -30,12 +29,6 @@
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!
                   </p>
                 </template>
-                <!-- <template #footer>
-                  <div class="flex gap-3 mt-1">
-                    <Button label="Cancel" severity="secondary" outlined class="w-full" ></Button>
-                    <Button label="Save" class="w-full" ></Button>
-                  </div>
-                </template> -->
               </Card>
             </div>
           </div>
@@ -44,14 +37,11 @@
     </main>
 
     <!-- Columna derecha (Visible solo en desktop) -->
-    <div class="hidden lg:block w-48 bg-gray-800 p-4 sticky top-0 h-screen overflow-y-auto">
+ <div class="hidden lg:flex flex-col w-48 bg-gray-800 p-4 sticky top-0 h-screen">
       <h3 class="text-amber-500 font-bold mb-4">Publicidad</h3>
-      <div class="space-y-4">
-        <div class="bg-gray-700 p-2 rounded-lg h-64 flex items-center justify-center">
-          <p>Anuncio 3</p>
-        </div>
-        <div class="bg-gray-700 p-2 rounded-lg h-64 flex items-center justify-center">
-          <p>Anuncio 4</p>
+      <div class="flex-1 overflow-y-auto"> <!-- Flex-1 + overflow para contenido largo -->
+        <div class="bg-gray-700 p-2 rounded-lg h-full flex items-center justify-center"> <!-- h-full aquí -->
+          <p>Anuncio 2</p>
         </div>
       </div>
     </div>

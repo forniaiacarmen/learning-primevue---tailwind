@@ -8,10 +8,10 @@
 </template>
 
 <script>
-import HeroTitle from '@/components/HeroTitle.vue';
-import MyMenuBar from '@/components/MyMenuBar.vue';
-import Columns from '@/components/Columns.vue';
-import Footer from '@/components/Footer.vue';
+import HeroTitle from '@/components/landingcomponents/HeroTitle.vue';
+import MyMenuBar from '@/components/landingcomponents/MyMenuBar.vue';
+import Columns from '@/components/landingcomponents/Columns.vue';
+import Footer from '@/components/landingcomponents/Footer.vue';
 
 export default {
   components: {
