@@ -1,7 +1,5 @@
-<script setup>
-import Landing from './layouts/Landing.vue';
-</script>
 
 <template>
-  <Landing/>
+    <router-view />
+  <!-- <Landing/> -->
 </template>
